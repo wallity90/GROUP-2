@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HMS</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" type="text/css" href="app-assets/css/vendors.min.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/datatables.min.css">
+        <link href="style/common.css" rel="stylesheet">
+        <link href="style/style.css" rel="stylesheet">
+        <link href="style/responsive.css" rel="stylesheet">
+
+        <!-- ===================================================== -->
+        <style type="text/css">
+        </style>
+        <!-- ===================================================== -->
+    </head>
+
+    <body style="background: linear-gradient( rgba(255, 255, 255, 0.900), rgba(255, 255, 255, 0.900) ), url(images/resource/blog-pic-2.jpg);background-repeat: no-repeat;  background-position: center;">
+        <div class="wrap">
+        <div class="tp-bar">
+            <div class="container">
+            <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="help"></a> <span class="slogan"> Patient Records Management System </span> </div>
+            </div>
+        </div><!-- tp-bar ends -->
+        <nav class="menu-bar">
+            <div class="container">
+                <a href="#" class="tablet-menu"></a>
+                <ul class="menu">
+                <li><a href="homepage.html">Dashboard</a></li>
+                <li><a href="wards.html">Wards</a></li>
+                <li><a href="teams.html">Medical Teams</a></li>
+                <li><a href="patients.html">Patients</a></li>
+                <li><a href="#">Contact Us</a></li>
+                </ul><!-- menu ends --> 
+                <div class="user-controls">
+                <a href="index.html" class="user-login"></a>
+                <a href="#" class="user-search"></a>
+                </div>
+            </div>
+        </nav><!-- menu-bar ends -->
+        <div class="banner" style="background:url(images/resource/blog-pic-4.jpg); background-size:cover; background-position:center;">
+            <div class="container">
+            <h1>Medical Teams Members</h1>
+            <div class="bread-bar clearfix">
+                <ul class="breadcrumb">
+                <li><a href="homepage.html">Dashboard</a></li>
+                <li><a href="#">Teams</a></li>
+                </ul>
+            </div>
+            </div>
+        </div><!-- banner ends -->
+        
+        <div class="container">
+          <div class="row">
+
+                <div class="span3 sidebar">
+                  <div class="events">
+                    <h5 style="font-weight:normal;">Welcome,</h5>
+                    <h2 style="margin-bottom:5px;"><strong id="labal_username" style="text-transform:capitalize;"></strong></h2>
+                    <h5 style="font-weight:normal; margin-bottom:30px;">You're signed in as: <strong id="labal_userrole" style="text-transform:uppercase;"></strong></h5>
+                    
+                    <div id="sidebar_admin" class="sidebar" style="display:none;">
+                      <a href="homepage.html">Dashboard</a>
+                      <a href="#">Switch User</a>
+                      <a href="#">Manage Account</a>
+                      <a href="#">Settings</a>
+                      <a href="index.html">Sign Out</a><br><br>
+
+                        
+                    </div>
+                    <div id="sidebar_consultant" class="sidebar" style="display:none;">
+                      <a href="homepage.html#">Dashboard</a>
+                      <a href="#">Mail</a>
+                      <a href="#">Calendar</a>
+                      <a href="#">Work Schedule</a>
+                      <a href="#">Tools</a>
+                      <a href="#">Settings</a>
+                      <a href="index.html">Sign Out</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="span9">
+
+                    <div class="tableblock">
+                    <h2><strong id="label_team">Teams</strong> </h2>
+                    <table class="entry_tables table table-striped table-bordered zero-configuration">
+                        <thead>
+                            <tr>
+                                <th colspan="7" class="extrafilter">
+                                    <Select id="teams">
+                                        <option value="all">Select Team</option>
+                                        <option value="X101">X101</option>
+                                        <!-- <option value="X102">X102</option>
+                                        <option value="X103">X103</option>
+                                        <option value="X104">X104</option>
+                                        <option value="X105">X105</option>
+                                        <option value="X106">X106</option> -->
+                                    </select>
+            
+                                    <!-- <Select id="patients">
+                                        <option value="all">Select Team</option>
+                                        <option value="X101">X101</option>
+                                        <option value="X102">X102</option>
+                                        <option value="X103">X103</option>
+                                        <option value="X104">X104</option>
+                                        <option value="X105">X105</option>
+                                        <option value="X106">X106</option>
+                                    </select> -->
+                                </th>
+                            </tr>
+
+                            <tr>
+                            <th style="width:30%">Team Members Names</th>
+                            <th style="width:20%">Specialty</th>
+                            <th style="width:15%">Rank Level</th>
+                            <th style="width:15%">Team Code</th>
+                            <th style="width:20%">Team Head</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>                            
+                            <tr><td>Dr. Harh Mira</td><td>Consultant Gynecologist</td><td>Level 7</td><td class="cell_teamcode">X101</td><td>þ Dr. Harh</td></tr>
+                            <tr><td>Dr. Dan </td><td>Senior Resident</td><td>Level 6</td><td class="cell_teamcode">X101</td><td></td></tr>
+                            <tr><td>Dr. Tom</td><td>Junior Resident</td><td>Level 5</td><td class="cell_teamcode">X101</td><td></td></tr>
+                            <tr><td>Dr. Liz Jones</td><td>Attending Physician</td><td>Level 4</td><td class="cell_teamcode">X101</td><td></td></tr>
+                            <tr><td>Dr. Alex</td><td>Specialist Doctor</td><td>Level 3</td><td class="cell_teamcode">X101</td><td></td></tr>
+                            <tr><td>Dr. Mary</td><td>Medical Officer (Junior Doctor)</td><td>Level 2</td><td class="cell_teamcode">X101</td><td></td></tr>
+                            <tr><td>Dr. Jenny</td><td>Medcal Intern (Junior Doctor)</td><td>Level 1</td><td class="cell_teamcode">X101</td><td></td></tr>
+                            <tr><td>Dr. Lane kang</td><td>Senior Resident</td><td>Level 6</td><td class="cell_teamcode">X102</td><td></td></tr>
+                            <tr><td>Dr. Harry Jane</td><td>Junior Resident</td><td>Level 5</td><td class="cell_teamcode">X102</td><td></td></tr>
+                            <tr><td>Dr. Grace Pelt</td><td>Medical Physician</td><td>Level 4</td><td class="cell_teamcode">X105</td><td></td></tr>
+                            <tr><td>Dr. Teresa Lisbon</td><td>Specialist Doctor</td><td>Level 3</td><td class="cell_teamcode">X103</td><td></td></tr>
+                            <tr><td>Dr. Megan Meg</td><td>Medical Officer (Junior Doctor)</td><td>Level 2</td><td class="cell_teamcode">X103</td><td></td></tr>
+                            <tr><td>Dr. Jenni Kate</td><td>Medical Intern (Junior Doctor)</td><td>Level 1</td><td class="cell_teamcode">X104</td><td></td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- ===================================================================================== -->
+                   
+                    <!-- ===================================================================================== -->
+                    <!-- ===================================================================================== -->
+
+                    </div><!-- tableblock end -->
+
+                    <div class="tableblock">
+                        <h2><strong id="label_patients">Patients</strong><a style="float:right; font-size:0.55em; font-style:italic;"><u>View All Patients</u></a></h2>
+                        <table class="entry_tables_patients table table-striped table-bordered zero-configuration" style="width: 100%!important; overflow:scroll">
+                            <thead>
+                                <tr>
+                                <th style="width:20%">Patient Names</th>
+                                <th style="width:20%">Treated By</th>
+                                <th style="width:20%">Consultant</th>
+                                <th style="width:15%">Treatment Status</th>
+                                <th style="width:10%">Team Assigned</th>
+                                <th style="width:5%">Ward</th>
+                                <th style="width:5%">Room</th>
+                                <th style="width:5%">Bed</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Jamie Gate</td><td>Dr. Alex</td><td>Dr. Harh</td><td>Completed</td><td class="cell_teamcode">X101</td><td>Female</td><td>1</td><td>5</td></tr>
+                                <tr><td>Sarah Sand</td><td>Dr. Dan</td><td>Dr. Harh</td><td>Under treatment</td><td class="cell_teamcode">X101</td><td>Female</td><td>4</td><td>3</td></tr>
+                                <tr><td>Dally Dave</td><td>Dr. Liz Jones</td><td>Dr. Harh</td><td>Under treatment</td><td class="cell_teamcode">X101</td><td>Female</td><td>6</td><td>2</td></tr>
+                                <tr><td>Jessicca James</td><td>"Dr. Mary (Junior Doctor Level 6)"</td><td>Dr. Harh</td><td>Under treatment</td><td class="cell_teamcode">X101</td><td>Female</td><td>5</td><td>1</td></tr>
+                                <tr><td>Maya Liam</td><td>Dr. Harh</td><td>Dr. Harh Mira</td><td>Under treatment</td><td class="cell_teamcode">X101</td><td>Female</td><td>1</td><td>2</td></tr>
+                                <tr><td>Stella Noah</td><td>Dr. Jenny Jane</td><td>Dr. Harh Mira</td><td>Under treatment</td><td class="cell_teamcode">X101</td><td>Female</td><td>2</td><td>5</td></tr>
+                                <tr><td>Lucas Lang</td><td>Dr. Tom Ting</td><td>Dr. Harh Mira</td><td></td><td class="cell_teamcode">X101</td><td>Female</td><td>3</td><td>7</td></tr>
+                            </tbody>
+                        </table>
+    
+                        <!-- ===================================================================================== -->
+                       
+                        <!-- ===================================================================================== -->
+                        <!-- ===================================================================================== -->
+    
+                        </div><!-- tableblock end -->
+
+                </div>
+
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+            <div class="row">
+                
+            </div>
+            </div>  
+        </footer>
+        <div class="bottom">
+        <div class="container">
+            <div class="bottom-left">
+            <p>&copy;2024 H.M.S All rights reserved.</p>
+            </div>
+            <div class="social-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Departments & Wards</a></li>
+                <li><a href="#">Admissions & Patients</a></li>
+            </ul>
+            </div>
+        </div>
+        </div><!-- bottom ends -->
+        </div><!-- wrap ends -->
+
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <!-- <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script> -->
+        <script src="app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
+        <script src="app-assets/js/scripts/tables/datatables/datatable-basic.js" type="text/javascript"></script>
+        
+        <script  type="text/javascript">
+            $(document).ready(function(){
+
+                if( sessionStorage.getItem("userrole") === '' || sessionStorage.getItem("userrole") === null ){
+                    let timeout = setTimeout(gotoPage("index.html"), 3000);
+                }
+
+                $(".entry_tables").DataTable({ "bDestroy": true, pageLength:100 });//stateSave: true, 
+                $(".cell_teamcode").closest('tr').hide();
+            
+                $("#labal_username").html(sessionStorage.getItem("username"));
+                $("#labal_userrole").html(sessionStorage.getItem("userrole"));
+
+                if( sessionStorage.getItem("userrole") == 'admin' ){
+                $("#sidebar_consultant").prop({"style":"display:none"});
+                $("#catalog_consultant").prop({"style":"display:none"});
+
+                $("#sidebar_admin").prop({"style":"display:block"});
+                $("#catalog_admin").prop({"style":"display:block"});
+                }
+                else{
+                $("#sidebar_admin").prop({"style":"display:none"});
+                $("#catalog_admin").prop({"style":"display:none"});
+
+                $("#sidebar_consultant").prop({"style":"display:block"});
+                $("#catalog_consultant").prop({"style":"display:block"});
+                }
+
+
+                $("#teams").change(function(){
+
+                    var team=$("#teams option").filter(":selected").val();
+                    if(team != 'all'){
+
+                        $("#label_team").html("Team "+team);
+                        $("#label_patients").html("Team "+team+" Pateints");
+                        $(".cell_teamcode").closest('tr').hide();
+                        $(".cell_teamcode:contains("+team+")").closest('tr').show();//$(".cell_teamcode").html(team).closest('tr').show();
+                    }
+                    else{
+                        $("#label_team").html("Teams ");
+                        $("#label_patients").html("Pateints");
+                        $(".cell_teamcode").closest('tr').hide();
+                    }
+                });
+
+            });
+
+            function gotoPage(page){ document.location.href = page; }
+
+        </script>
+
+    </body>
+</html>
